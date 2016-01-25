@@ -47,13 +47,12 @@
 }
 #container-game {
   margin: 0 auto;
-  margin-top: 5vh;
   position: relative;
   background: #333333;
-  width: 90vh;
-  min-width: 450px;
-  height: 90vh;
-  min-height: 450px;
+  width: 100vh;
+  min-width: 380px;
+  height: 100vh;
+  min-height: 380px;
   border-radius: 100%;
   border: #333333 10px solid;
 }
@@ -82,6 +81,7 @@
   padding-top: .8em;
   font-family: 'Alfa Slab One';
   font-size: 3.3em;
+  font-size: 10vh;
 }
 #startbutton {
   margin: 0 auto;
@@ -116,4 +116,12 @@
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+}
+@media screen and (max-height: 380px) {
+    #name {
+      font-size: 2.6em;
+    }
+    #lowercontrols {
+      padding-top: 1vh;
+    }
 }

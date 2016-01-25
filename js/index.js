@@ -125,11 +125,9 @@ function keyDown(key) {
 		lightenColors(key);
 	}
 }
-function keyUp() {
-	for(var i=0; i<4; i++){
-		stopSound(i);
-		darkenColors(i);
-	}
+function keyUp(key) {
+	stopSound(key);
+	darkenColors(key);
 }
 function start() {
 	reset();
@@ -148,8 +146,7 @@ function playKeys() {
 	startSound(cBtn);
 	
 	setTimeout(function(){
-		darkenColors(cBtn);
-		stopSound(cBtn);
+		keyUp(cBtn);
 	}, 400);
 	
 	count++;
@@ -175,8 +172,6 @@ function stopSound(num) {
 	gain[num].gain.value = 0.0;
 }
 
-$(document).on('mouseup touchend', keyUp);
-
 $('#btn-1').bind('touchstart mousedown', function(event){
 	if(event.type === 'touchstart'){
 		touchdown = true;
@@ -189,6 +184,9 @@ $('#btn-1').bind('touchstart mousedown', function(event){
 			touchdown = false;
 		}
 	}
+});
+$('#btn-1').bind('mouseup mouseleave touchend', function(){
+	keyUp(0);
 });
 $('#btn-2').bind('touchstart mousedown', function(){
 	if(event.type === 'touchstart'){
@@ -203,6 +201,9 @@ $('#btn-2').bind('touchstart mousedown', function(){
 		}
 	}
 });
+$('#btn-2').bind('mouseup mouseleave touchend', function(){
+	keyUp(1);
+});
 $('#btn-3').bind('touchstart mousedown', function(){
 	if(event.type === 'touchstart'){
 		touchdown = true;
@@ -215,6 +216,9 @@ $('#btn-3').bind('touchstart mousedown', function(){
 			touchdown = false;
 		}
 	}
+});
+$('#btn-3').bind('mouseup mouseleave touchend', function(){
+	keyUp(2);
 });
 $('#btn-4').bind('touchstart mousedown', function(){
 	if(event.type === 'touchstart'){
@@ -229,3 +233,8 @@ $('#btn-4').bind('touchstart mousedown', function(){
 		}
 	}
 });
+$('#btn-4').bind('mouseup mouseleave touchend', function(){
+	keyUp(3);
+});
+//disable right click
+$('#container-game').on('contextmenu', 'div', function(e){ return false; });
