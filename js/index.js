@@ -1,5 +1,6 @@
 var order = [];
 var enteredKeys = [];
+var touchdown = false;
 var count = 0;
 var currentState = 0;
 var btnList = {
@@ -174,4 +175,57 @@ function stopSound(num) {
 	gain[num].gain.value = 0.0;
 }
 
-$(document).on('mouseup', keyUp);
+$(document).on('mouseup touchend', keyUp);
+
+$('#btn-1').bind('touchstart mousedown', function(event){
+	if(event.type === 'touchstart'){
+		touchdown = true;
+		keyDown(0);
+	}
+	if(event.type === 'mousedown'){
+		if(touchdown === false){
+			keyDown(0);
+		}else{
+			touchdown = false;
+		}
+	}
+});
+$('#btn-2').bind('touchstart mousedown', function(){
+	if(event.type === 'touchstart'){
+		touchdown = true;
+		keyDown(1);
+	}
+	if(event.type === 'mousedown'){
+		if(touchdown === false){
+			keyDown(1);
+		}else{
+			touchdown = false;
+		}
+	}
+});
+$('#btn-3').bind('touchstart mousedown', function(){
+	if(event.type === 'touchstart'){
+		touchdown = true;
+		keyDown(2);
+	}
+	if(event.type === 'mousedown'){
+		if(touchdown === false){
+			keyDown(2);
+		}else{
+			touchdown = false;
+		}
+	}
+});
+$('#btn-4').bind('touchstart mousedown', function(){
+	if(event.type === 'touchstart'){
+		touchdown = true;
+		keyDown(3);
+	}
+	if(event.type === 'mousedown'){
+		if(touchdown === false){
+			keyDown(3);
+		}else{
+			touchdown = false;
+		}
+	}
+});
