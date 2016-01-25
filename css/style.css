@@ -1,0 +1,119 @@
+#btn-1 {
+  background: #00a74a;
+  float: left;
+  -webkit-border-radius: 100% 0 0 0;
+  -moz-border-radius: 100% 0 0 0;
+  border-radius: 100% 0 0 0;
+}
+#btn-2 {
+  background: #9f0f17;
+  float: right;
+  -webkit-border-radius: 0 100% 0 0;
+  -moz-border-radius: 0 100% 0 0;
+  border-radius: 0 100% 0 0;
+}
+#btn-3 {
+  background: #cca707;
+  float: left;
+  -webkit-border-radius: 0 0 0 100%;
+  -moz-border-radius: 0 0 0 100%;
+  border-radius: 0 0 0 100%;
+}
+#btn-4 {
+  background: #094a8f;
+  float: right;
+  -webkit-border-radius: 0 0 100% 0;
+  -moz-border-radius: 0 0 100% 0;
+  border-radius: 0 0 100% 0;
+}
+#btn-center {
+  position: absolute;
+  width: 50%;
+  height: 50%;
+  top: 25%;
+  left: 25%;
+  background: white;
+  -webkit-border-radius: 100%;
+  -moz-border-radius: 100%;
+  border-radius: 100%;
+  border: #333333 20px solid;
+}
+#container-controls {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+#container-game {
+  margin: 0 auto;
+  margin-top: 5vh;
+  position: relative;
+  background: #333333;
+  width: 90vh;
+  min-width: 450px;
+  height: 90vh;
+  min-height: 450px;
+  border-radius: 100%;
+  border: #333333 10px solid;
+}
+#countwrapper {
+  float: left;
+  width: 50%;
+}
+#count {
+  margin: 0;
+  margin-left: .5em;
+  margin-right: .5em;
+  font-size: 2em;
+  border: solid #333333 4px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+}
+#lowercontrols {
+  margin: 0 auto;
+  padding-top: .8em;
+  width: 80%;
+  height: 50%;
+}
+#name {
+  margin: 0;
+  padding-top: .8em;
+  font-family: 'Alfa Slab One';
+  font-size: 3.3em;
+}
+#startbutton {
+  margin: 0 auto;
+  margin-top: 14px;
+  border: 4px #333333 solid;
+  -webkit-border-radius: 100%;
+  -moz-border-radius: 100%;
+  border-radius: 100%;
+  width: 24px;
+  height: 24px;
+  background: #eb2934;
+}
+#startbutton:active {
+  background: #9f0f17;
+}
+#startwrapper {
+  float: right;
+  width: 50%;
+}
+.btn-game {
+  width: 50%;
+  height: 50%;
+  border: #333333 solid 10px;
+}
+.label {
+  color: #333333;
+}
+.noselect {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
