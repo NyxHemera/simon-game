@@ -166,7 +166,7 @@ function darkenColors(num) {
 	$(btnList.buttons[num]).css("background", btnList.darkcolors[num]);
 }
 function startSound(num) {
-	gain[num].gain.value = 0.4;
+	gain[num].gain.value = 0.25;
 }
 function stopSound(num) {
 	gain[num].gain.value = 0.0;
